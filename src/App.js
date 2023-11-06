@@ -5,6 +5,13 @@ function App() {
 
   const  [email,setEmail] = useState('')
   const  [password,setPassword] = useState('')
+  const  [isOpen,SetIsOpen] = useState(false)
+
+  function consoleCheck() {
+    if (true && true) {
+      console.log(11)
+    }
+  }
 
   return (
     <>
@@ -12,7 +19,7 @@ function App() {
       <h1 className={styles.title}>
         Hello world!
       </h1>
-      <button className={styles.btn}>
+      <button onClick={consoleCheck} className={styles.btn}>
         Click me!
       </button>
     </div>
@@ -37,9 +44,11 @@ function App() {
       >
       </input>
 
-      <button className={styles.btn2}>
+      <button onClick={() => SetIsOpen(!isOpen)} className={styles.btn2}>
         Click me!
       </button>
+      
+      {isOpen && <button className='animate-fade'>TEST</button>}
 
     </div>
     </>

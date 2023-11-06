@@ -11,9 +11,23 @@ module.exports = {
       },
       transitionDuration:{
         DEFAULT:'300ms',
+      },
+      keyframes:{
+        fadeIn: {
+          from: {
+            opacity:0
+          },
+          to: {
+            opacity:1
+          },
+        },
+      },
+      animation: {
+        fade: 'fadeIn .5s ease-in-out',
       }
     },
   },
   plugins: [],
+//plugin()
 }
 
