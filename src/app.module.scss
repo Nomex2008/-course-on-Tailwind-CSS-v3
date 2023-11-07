@@ -15,5 +15,7 @@
     animate-spin md:bg-purple-600 md:dark:bg-red-600
 }
 .btn2 {
-    @apply block mx-auto w-full mt-2 dark:bg-orange-600 py-2 hover:bg-opacity-60 transition-all  ease-linear
+    @apply block mx-auto w-full mt-2  py-2 transition-all  ease-linear
+    /*btn-primary*/ card
+    
 }

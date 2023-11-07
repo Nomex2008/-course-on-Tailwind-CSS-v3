@@ -1,3 +1,6 @@
+const { hover } = require('@testing-library/user-event/dist/hover')
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -27,7 +30,19 @@ module.exports = {
       }
     },
   },
-  plugins: [],
-//plugin()
+  plugins: [
+    plugin(function ({ addBase, addComponents, addUtilities, theme }) {
+      addComponents({
+        '.card': {
+          backgroundColor:'rgb(51, 255, 255)',
+          opacity:'1',
+
+          '&:hover':{
+            backgroundColor:'rgb(2, 68, 68)',
+          }
+        }
+      })
+    })
+  ]
 }
 
